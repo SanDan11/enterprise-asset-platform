@@ -4,7 +4,7 @@ public class Organization
 {
     public Guid Id { get; private set; }
     public string Name { get; private set; }
-    public DateTime createAtUtc { get; private set; }
+    public DateTime CreateAtUtc { get; private set; }
 
     private Organization() { }
 
@@ -15,6 +15,6 @@ public class Organization
 
         Id = Guid.NewGuid();
         Name = name;
-        createAtUtc = DateTime.UtcNow;
+        CreateAtUtc = DateTime.UtcNow;
     }
 }
