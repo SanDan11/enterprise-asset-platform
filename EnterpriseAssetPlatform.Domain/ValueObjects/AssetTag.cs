@@ -21,5 +21,18 @@ public sealed class AssetTag
         return new AssetTag(value.Trim().ToLowerInvariant());
     }
 
+    public override bool Equals(object? obj)
+    {
+        if (obj is not AssetTag other)
+            return false;
 
+        return Value == other.Value;
+    }
+
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
+
+    public override string ToString() => Value;
 }
